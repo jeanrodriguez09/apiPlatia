@@ -23,7 +23,7 @@ class Session extends BaseConfig
      * @phpstan-var class-string<BaseHandler>
      */
     // public string $driver = FileHandler::class;
-    public string $driver = RedisHandler::class;
+    public string $driver = FileHandler::class;
 
     /**
      * --------------------------------------------------------------------------
@@ -60,7 +60,7 @@ class Session extends BaseConfig
      * IMPORTANT: You are REQUIRED to set a valid save path!
      */
     // public string $savePath = WRITEPATH . 'session';
-    public string $savePath = 'tcp://127.0.0.1:6379';
+    public string $savePath = WRITEPATH . 'session';
 
     /**
      * --------------------------------------------------------------------------

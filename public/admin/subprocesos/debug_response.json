@@ -1,0 +1,102 @@
+[
+    {
+        "tipo": "recibido",
+        "mensaje": "Gracias",
+        "fecha": "2025-09-09 16:49:10"
+    },
+    {
+        "tipo": "recibido",
+        "mensaje": "Quiero pedir comida",
+        "fecha": "2025-09-09 16:49:18"
+    },
+    {
+        "tipo": "recibido",
+        "mensaje": "Gracias",
+        "fecha": "2025-09-09 16:49:28"
+    },
+    {
+        "tipo": "recibido",
+        "mensaje": "Quiero realizar un pedido",
+        "fecha": "2025-09-09 16:49:36"
+    },
+    {
+        "tipo": "recibido",
+        "mensaje": "Gracias",
+        "fecha": "2025-09-09 16:49:48"
+    },
+    {
+        "tipo": "enviado",
+        "mensaje": "Hola",
+        "fecha": "2025-09-21 22:39:31"
+    },
+    {
+        "tipo": "recibido",
+        "mensaje": "Gracias",
+        "fecha": "2025-09-21 22:40:07"
+    },
+    {
+        "tipo": "enviado",
+        "mensaje": "?Con gusto! Estamos disponibles para ayudarte.",
+        "fecha": "2025-09-21 22:40:07"
+    },
+    {
+        "tipo": "enviado",
+        "mensaje": "Hola",
+        "fecha": "2025-09-21 22:40:21"
+    },
+    {
+        "tipo": "enviado",
+        "mensaje": "Escribo desde el administrador web.",
+        "fecha": "2025-09-21 22:41:06"
+    },
+    {
+        "tipo": "recibido",
+        "mensaje": "Respondo desde whatsapp",
+        "fecha": "2025-09-21 22:41:20"
+    },
+    {
+        "tipo": "enviado",
+        "mensaje": "?Hola! Gracias por contactarnos. ?En qu? puedo ayudarte hoy? ?Est?s interesado en nuestros productos gastron?micos o en agendar un servicio?",
+        "fecha": "2025-09-21 22:41:24"
+    },
+    {
+        "tipo": "recibido",
+        "mensaje": "No, gracias",
+        "fecha": "2025-09-21 22:41:42"
+    },
+    {
+        "tipo": "enviado",
+        "mensaje": "?Con gusto! Estamos disponibles para ayudarte.",
+        "fecha": "2025-09-21 22:41:43"
+    },
+    {
+        "tipo": "enviado",
+        "mensaje": "Este es un mensaje desde mi administrador web",
+        "fecha": "2025-09-21 22:43:49"
+    },
+    {
+        "tipo": "recibido",
+        "mensaje": "Esta es la respuesta desde la aplicaci?n whatsapp",
+        "fecha": "2025-09-21 22:44:08"
+    },
+    {
+        "tipo": "enviado",
+        "mensaje": "?Hola! Parece que me has enviado un mensaje desde WhatsApp. ?En qu? puedo ayudarte hoy? Si est?s interesado en nuestros productos o servicios, no dudes en dec?rmelo.",
+        "fecha": "2025-09-21 22:44:12"
+    },
+    {
+        "tipo": "enviado",
+        "mensaje": "Hola te escribro desde el administrador web",
+        "fecha": "2025-09-22 12:14:43"
+    },
+    {
+        "tipo": "recibido",
+        "mensaje": "Hola. Respondo desde mi whatsapp.",
+        "fecha": "2025-09-22 12:15:04"
+    },
+    {
+        "tipo": "enviado",
+        "mensaje": "?Hola de nuevo! Estoy aqu? para ayudarte. ?Te gustar?a saber m?s sobre nuestros productos o servicios?",
+        "fecha": "2025-09-22 12:15:12"
+    }
+]

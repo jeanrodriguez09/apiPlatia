@@ -2,7 +2,6 @@ FROM php:7.4-apache
 
 ARG PROJECT_NAME=api_platia
 
-# Instalar extensiones necesarias incluyendo intl
 RUN apt-get update && apt-get install -y libicu-dev \
     && docker-php-ext-install mysqli pdo pdo_mysql intl \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -14,7 +13,6 @@ COPY . /var/www/${PROJECT_NAME}/
 WORKDIR /var/www/${PROJECT_NAME}/
 RUN chown -R www-data:www-data /var/www/${PROJECT_NAME}
 
-# Configurar VirtualHost propio
 RUN echo "<VirtualHost *:80>\n\
     ServerAdmin webmaster@localhost\n\
     DocumentRoot /var/www/${PROJECT_NAME}/public\n\
@@ -28,5 +26,6 @@ RUN echo "<VirtualHost *:80>\n\
 </VirtualHost>" > /etc/apache2/sites-available/${PROJECT_NAME}.conf
 
 RUN a2ensite ${PROJECT_NAME}.conf && a2dissite 000-default.conf
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 EXPOSE 80

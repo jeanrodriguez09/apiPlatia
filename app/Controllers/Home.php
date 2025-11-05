@@ -1,47 +1,21 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\FormulariosUtocModel;
-use App\Models\FormulariosPreguntasModel;
-use App\Models\FormulariosRespuestasModel;
-use App\Models\FormulariosRespuestasGeneradasModel;
-use App\Models\ClientesEvaluacionModel;
-use App\Models\HistorialesClientesModel;
 
 class Home extends Auth
 {
-    protected $formulariosUtoc;
-    protected $formulariosPreguntas;
-    protected $formulariosRespuestas;
-    protected $clientesEvaluacion;
-    protected $formulariosRespuestasGeneradas;
-    protected $historialesClientes;
 
     public function __construct(){
         $this->authorizedSession(true);
-        $this->formulariosUtoc                  = new FormulariosUtocModel();
-        $this->formulariosPreguntas             = new FormulariosPreguntasModel();
-        $this->formulariosRespuestas            = new FormulariosRespuestasModel();
-        $this->formulariosRespuestasGeneradas   = new FormulariosRespuestasGeneradasModel();
-        $this->clientesEvaluacion               = new ClientesEvaluacionModel();
-        $this->historialesClientes              = new HistorialesClientesModel();
     }
 
     public function index()
     {
-        $data = [
-            'scripts' => ['js/pages/login/login.js']
-        ];
-        
-        return view('/pages/login/index', $data);
+        return redirect()->to('/admin');
     }
 
     public function login(){
-        $data = [
-            'scripts' => ['js/pages/login/login.js']
-        ];
-        
-        return view('/pages/login/index', $data);
+        return redirect()->to('/admin');
     }
     
     public function recuperarContrasena(){

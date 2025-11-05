@@ -3,14 +3,13 @@ version: '3.8'
 services:
   api_platia_app:
     build:
-      context: .
+      context: ./
+      dockerfile: Dockerfile
       args:
         PROJECT_NAME: api_platia
     container_name: api_platia_app
     ports:
       - "8080:80"
-    volumes:
-      - .:/var/www/api_platia
     depends_on:
       - api_platia_db
     environment:

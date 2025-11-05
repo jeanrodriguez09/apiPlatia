@@ -30,6 +30,7 @@ services:
       MYSQL_DATABASE: api_platia_db
     volumes:
       - api_platia_db_data:/var/lib/mysql
+      - ./backup:/docker-entrypoint-initdb.d
     networks:
       - api_platia_net
 

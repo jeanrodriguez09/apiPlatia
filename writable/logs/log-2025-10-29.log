@@ -1,0 +1,126 @@
+DEBUG - 2025-10-29 09:30:04 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-29 09:33:28 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-29 09:33:29 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 09:33:31 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 09:33:42 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 09:33:44 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 09:34:07 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 09:34:14 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 09:34:16 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 09:44:51 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-29 09:54:14 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-29 09:54:40 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-29 09:58:43 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 09:58:58 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-29 09:58:59 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 09:59:07 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 09:59:15 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 09:59:27 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 09:59:40 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 10:00:22 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 10:00:23 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 10:01:58 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 10:02:05 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 10:02:15 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 10:02:28 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 10:03:24 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 10:03:30 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 10:03:37 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 10:04:42 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-29 10:04:48 --> TOTAL DE DATOS servicios: 4
+CRITICAL - 2025-10-29 12:41:29 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-29 12:57:46 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-29 13:02:19 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-29 13:23:34 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-29 14:58:32 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-29 14:58:33 --> TOTAL DE DATOS empresas: 1
+DEBUG - 2025-10-29 14:58:34 --> TOTAL DE DATOS empresas: 1
+DEBUG - 2025-10-29 14:59:17 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 14:59:23 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 14:59:32 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 14:59:33 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 14:59:56 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:00:30 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:00:40 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:04:45 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:05:55 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:06:11 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:06:29 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:06:42 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:07:05 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:07:15 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:07:50 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:08:12 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:08:28 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:57:12 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-29 15:57:17 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:57:33 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:57:49 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:57:51 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:57:58 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:58:22 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-29 15:58:34 --> TOTAL DE DATOS empresas: 2

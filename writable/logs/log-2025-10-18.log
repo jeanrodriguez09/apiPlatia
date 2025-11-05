@@ -1,0 +1,32 @@
+DEBUG - 2025-10-18 10:02:05 --> SESION ELIMINADA DE:1
+DEBUG - 2025-10-18 10:03:26 --> Datos valores: {"valores":[{"idValorDescuento":"","cantidad_min":"1","cantidad_max":"10","valor":"10"}]}
+DEBUG - 2025-10-18 10:04:49 --> Datos valores: {"valores":[{"idValorDescuento":"","cantidad_min":"1","cantidad_max":"10","valor":"10"}]}
+DEBUG - 2025-10-18 10:05:27 --> Datos valores: {"valores":[{"idValorDescuento":"","cantidad_min":"1","cantidad_max":"20","valor":"10"}]}
+DEBUG - 2025-10-18 10:05:27 --> NUEVO VALOR INSERTADO (7) POR USUARIO (1)
+DEBUG - 2025-10-18 10:05:27 --> ID Valor descuento
+DEBUG - 2025-10-18 10:05:43 --> Datos valores: {"valores":[{"idValorDescuento":"7","cantidad_min":"1","cantidad_max":"40","valor":"10.00"}]}
+ERROR - 2025-10-18 10:05:43 --> error en productos/actualizarEsquemaConValores: ErrorException: Undefined variable $id in /opt/homebrew/var/www/admindufar-v2/app/Controllers/Productos.php:538
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Productos.php(538): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/opt/homebrew/v...', 538)
+#1 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Productos->actualizarEsquemaConValores('9')
+#2 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#3 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#5 {main}
+DEBUG - 2025-10-18 10:08:20 --> Datos valores: {"valores":[{"idValorDescuento":"7","cantidad_min":"1","cantidad_max":"50","valor":"10.00"}]}
+DEBUG - 2025-10-18 10:08:20 --> VALOR ACTUALIZADO (7) POR USUARIO (1)
+DEBUG - 2025-10-18 10:08:20 --> ID Valor descuento7
+DEBUG - 2025-10-18 10:45:42 --> Datos valores: {"valores":[{"idValorDescuento":"7","cantidad_min":"1","cantidad_max":"50","valor":"10.00"},{"idValorDescuento":"","cantidad_min":"51","cantidad_max":"60","valor":"20"}]}
+DEBUG - 2025-10-18 10:45:42 --> VALOR ACTUALIZADO (7) POR USUARIO (1)
+DEBUG - 2025-10-18 10:45:42 --> ID Valor descuento7
+DEBUG - 2025-10-18 10:45:42 --> NUEVO VALOR INSERTADO (8) POR USUARIO (1)
+DEBUG - 2025-10-18 10:45:42 --> ID Valor descuento
+DEBUG - 2025-10-18 11:42:54 --> SESION ELIMINADA DE:1
+DEBUG - 2025-10-18 12:53:34 --> Datos valores: {"valores":[{"idValorDescuento":"7","cantidad_min":"1","cantidad_max":"50","valor":"10.00"},{"idValorDescuento":"8","cantidad_min":"51","cantidad_max":"70","valor":"20.00"}]}
+DEBUG - 2025-10-18 12:53:34 --> VALOR ACTUALIZADO (7) POR USUARIO (1)
+DEBUG - 2025-10-18 12:53:34 --> ID Valor descuento7
+DEBUG - 2025-10-18 12:53:34 --> VALOR ACTUALIZADO (8) POR USUARIO (1)
+DEBUG - 2025-10-18 12:53:34 --> ID Valor descuento8
+DEBUG - 2025-10-18 12:55:59 --> Datos valores: {"valores":[{"idValorDescuento":"","cantidad_min":"1","cantidad_max":"50","valor":"20"}]}
+DEBUG - 2025-10-18 12:55:59 --> NUEVO VALOR INSERTADO (9) POR USUARIO (1)
+DEBUG - 2025-10-18 12:55:59 --> ID Valor descuento

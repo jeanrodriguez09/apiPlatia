@@ -1,0 +1,83 @@
+DEBUG - 2025-10-10 07:35:43 --> {
+    "id": "1",
+    "legajo": "0",
+    "id_rol": "1",
+    "id_agencia": "1",
+    "id_grupo_vendedor": null,
+    "usuario": "indufaradmin",
+    "nombre_completo": "Administrador",
+    "contrasena": "6f0603e74b34884fd29f9ba04bd98332",
+    "cantidad_intentos": "2",
+    "visitas": "0",
+    "correo": "",
+    "estado": "1",
+    "cambio_contrasena": "1",
+    "fecha_creacion": "2021-09-14 00:51:35",
+    "fecha_actualizacion": "2025-10-08 09:42:53"
+}
+DEBUG - 2025-10-10 07:35:43 --> INGRESO A USUARIOS
+DEBUG - 2025-10-10 07:35:48 --> SESION ELIMINADA DE:1
+ERROR - 2025-10-10 07:58:45 --> mysqli_sql_exception: Table 'gestion_ventas.corte_horario_tesoreria' doesn't exist in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/homebrew/var/www/admindufar-v2/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /opt/homebrew/var/www/admindufar-v2/app/Controllers/RendicionesCajas.php(77): CodeIgniter\BaseModel->first()
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\RendicionesCajas->tesoreria()
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RendicionesCajas))
+#9 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-10 07:58:45 --> Table 'gestion_ventas.corte_horario_tesoreria' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `corte_horario_tesoreria`
+WHERE `id` = 1
+ LIMIT 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `corte_horario_tesoreria`
+WHERE `id` = 1
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `corte_horario_tesoreria`
+WHERE `id` = 1
+ LIMIT 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `corte_horario_tesoreria`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH/Controllers/RendicionesCajas.php(77): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\RendicionesCajas->tesoreria()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RendicionesCajas))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-10 08:00:07 --> VENTAS: {"total":null}
+CRITICAL - 2025-10-10 09:58:23 --> Undefined array key "seleccionado"
+in APPPATH/Views/pages/productos/esquemaDescuentos.php on line 179.
+ 1 APPPATH/Views/pages/productos/esquemaDescuentos.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "seleccionado"', '/opt/homebrew/var/www/admindufar-v2/app/Views/pages/productos/esquemaDescuentos.php', 179)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/homebrew/var/www/admindufar-v2/app/Views/pages/productos/esquemaDescuentos.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render('/pages/productos/esquemaDescuentos', [], true)
+ 5 APPPATH/Controllers/Productos.php(175): view('/pages/productos/esquemaDescuentos', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Productos->esquemaDescuentos('400000024')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-10 14:31:28 --> Undefined variable $clientes
+in APPPATH/Views/pages/productos/esquemaDescuentos.php on line 105.
+ 1 APPPATH/Views/pages/productos/esquemaDescuentos.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientes', '/opt/homebrew/var/www/admindufar-v2/app/Views/pages/productos/esquemaDescuentos.php', 105)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/homebrew/var/www/admindufar-v2/app/Views/pages/productos/esquemaDescuentos.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render('/pages/productos/esquemaDescuentos', [], true)
+ 5 APPPATH/Controllers/Productos.php(154): view('/pages/productos/esquemaDescuentos', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Productos->esquemaDescuentos('400000024')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-10 16:36:34 --> SESION ELIMINADA DE:1
+DEBUG - 2025-10-10 16:36:34 --> Session: Redis::del() expected to return 1, got 0 instead.

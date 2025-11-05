@@ -1,0 +1,341 @@
+CRITICAL - 2025-10-20 18:23:56 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 18:23:56 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 18:23:56 --> Declaration of CodeIgniter\I18n\TimeTrait::createFromTimestamp(int $timestamp, $timezone = null, ?string $locale = null) must be compatible with DateTimeImmutable::createFromTimestamp(int|float $timestamp): CodeIgniter\Autoloader\Autoloader
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+#0 /home/platcompy/api.plat.com.py/app/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+#1 /home/platcompy/api.plat.com.py/system/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+#3 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#4 {main}
+in SYSTEMPATH/I18n/TimeTrait.php on line 258.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-20 18:23:56 --> Declaration of CodeIgniter\I18n\TimeTrait::createFromTimestamp(int $timestamp, $timezone = null, ?string $locale = null) must be compatible with DateTimeImmutable::createFromTimestamp(int|float $timestamp): CodeIgniter\Autoloader\Autoloader
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+#0 /home/platcompy/api.plat.com.py/app/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+#1 /home/platcompy/api.plat.com.py/system/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+#3 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#4 {main}
+in SYSTEMPATH/I18n/TimeTrait.php on line 258.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-20 18:26:46 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 18:28:06 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 18:58:26 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 19:49:25 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 19:49:25 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 19:49:25 --> Declaration of CodeIgniter\I18n\TimeTrait::createFromTimestamp(int $timestamp, $timezone = null, ?string $locale = null) must be compatible with DateTimeImmutable::createFromTimestamp(int|float $timestamp): CodeIgniter\Autoloader\Autoloader
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+#0 /home/platcompy/api.plat.com.py/app/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+#1 /home/platcompy/api.plat.com.py/system/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+#3 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#4 {main}
+in SYSTEMPATH/I18n/TimeTrait.php on line 258.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-20 19:49:26 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 19:49:26 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 19:49:26 --> Declaration of CodeIgniter\I18n\TimeTrait::createFromTimestamp(int $timestamp, $timezone = null, ?string $locale = null) must be compatible with DateTimeImmutable::createFromTimestamp(int|float $timestamp): CodeIgniter\Autoloader\Autoloader
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+#0 /home/platcompy/api.plat.com.py/app/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+#1 /home/platcompy/api.plat.com.py/system/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+#3 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#4 {main}
+in SYSTEMPATH/I18n/TimeTrait.php on line 258.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-20 19:49:28 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 19:49:28 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 19:49:28 --> Declaration of CodeIgniter\I18n\TimeTrait::createFromTimestamp(int $timestamp, $timezone = null, ?string $locale = null) must be compatible with DateTimeImmutable::createFromTimestamp(int|float $timestamp): CodeIgniter\Autoloader\Autoloader
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+#0 /home/platcompy/api.plat.com.py/app/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+#1 /home/platcompy/api.plat.com.py/system/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+#3 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#4 {main}
+in SYSTEMPATH/I18n/TimeTrait.php on line 258.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-20 19:50:06 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 19:50:06 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 19:50:06 --> Declaration of CodeIgniter\I18n\TimeTrait::createFromTimestamp(int $timestamp, $timezone = null, ?string $locale = null) must be compatible with DateTimeImmutable::createFromTimestamp(int|float $timestamp): CodeIgniter\Autoloader\Autoloader
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+#0 /home/platcompy/api.plat.com.py/app/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+#1 /home/platcompy/api.plat.com.py/system/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+#3 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#4 {main}
+in SYSTEMPATH/I18n/TimeTrait.php on line 258.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-20 20:38:29 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 20:38:29 --> Declaration of CodeIgniter\I18n\TimeTrait::createFromTimestamp(int $timestamp, $timezone = null, ?string $locale = null) must be compatible with DateTimeImmutable::createFromTimestamp(int|float $timestamp): CodeIgniter\Autoloader\Autoloader
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+#0 /home/platcompy/api.plat.com.py/app/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+#1 /home/platcompy/api.plat.com.py/system/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+#3 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#4 {main}
+in SYSTEMPATH/I18n/TimeTrait.php on line 258.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-20 20:38:29 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 20:38:29 --> Declaration of CodeIgniter\I18n\TimeTrait::createFromTimestamp(int $timestamp, $timezone = null, ?string $locale = null) must be compatible with DateTimeImmutable::createFromTimestamp(int|float $timestamp): CodeIgniter\Autoloader\Autoloader
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+#0 /home/platcompy/api.plat.com.py/app/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+#1 /home/platcompy/api.plat.com.py/system/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+#3 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#4 {main}
+in SYSTEMPATH/I18n/TimeTrait.php on line 258.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-20 21:27:51 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 21:27:51 --> Declaration of CodeIgniter\I18n\TimeTrait::createFromTimestamp(int $timestamp, $timezone = null, ?string $locale = null) must be compatible with DateTimeImmutable::createFromTimestamp(int|float $timestamp): CodeIgniter\Autoloader\Autoloader
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+#0 /home/platcompy/api.plat.com.py/app/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+#1 /home/platcompy/api.plat.com.py/system/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+#3 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#4 {main}
+in SYSTEMPATH/I18n/TimeTrait.php on line 258.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-20 22:13:21 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 22:13:21 --> Declaration of CodeIgniter\I18n\TimeTrait::createFromTimestamp(int $timestamp, $timezone = null, ?string $locale = null) must be compatible with DateTimeImmutable::createFromTimestamp(int|float $timestamp): CodeIgniter\Autoloader\Autoloader
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+#0 /home/platcompy/api.plat.com.py/app/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+#1 /home/platcompy/api.plat.com.py/system/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+#3 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#4 {main}
+in SYSTEMPATH/I18n/TimeTrait.php on line 258.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-20 22:27:20 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 22:27:20 --> Declaration of CodeIgniter\I18n\TimeTrait::createFromTimestamp(int $timestamp, $timezone = null, ?string $locale = null) must be compatible with DateTimeImmutable::createFromTimestamp(int|float $timestamp): CodeIgniter\Autoloader\Autoloader
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+#0 /home/platcompy/api.plat.com.py/app/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+#1 /home/platcompy/api.plat.com.py/system/Events/Events.php(148): CodeIgniter\Events\Events::{closure:/home/platcompy/api.plat.com.py/app/Config/Events.php:25}()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+#3 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#4 {main}
+in SYSTEMPATH/I18n/TimeTrait.php on line 258.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-20 22:33:11 --> Your zlib.output_compression ini directive is turned on. This will not work well with output buffers.
+in APPPATH/Config/Events.php on line 28.
+ 1 APPPATH/Config/Events.php(28): CodeIgniter\Exceptions\FrameworkException::forEnabledZlibOutputCompression()
+ 2 SYSTEMPATH/Events/Events.php(148): CodeIgniter\Events\Events::Config\{closure}()
+ 3 SYSTEMPATH/CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 22:41:13 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-20 23:04:41 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-20 23:24:24 --> {
+    "Content-Type": {},
+    "Connection": {},
+    "Accept-Encoding": {},
+    "Host": {},
+    "Postman-Token": {},
+    "Cache-Control": {},
+    "Accept": {},
+    "User-Agent": {},
+    "X-Api-Version": {},
+    "X-Api-Secret": {},
+    "X-Api-Key": {}
+}
+DEBUG - 2025-10-20 23:25:13 --> {
+    "Content-Type": {},
+    "Connection": {},
+    "Accept-Encoding": {},
+    "Host": {},
+    "Postman-Token": {},
+    "Cache-Control": {},
+    "Accept": {},
+    "User-Agent": {},
+    "X-Api-Version": {},
+    "X-Api-Secret": {},
+    "X-Api-Key": {}
+}
+DEBUG - 2025-10-20 23:26:52 --> {
+    "Content-Type": {},
+    "Connection": {},
+    "Accept-Encoding": {},
+    "Host": {},
+    "Postman-Token": {},
+    "Cache-Control": {},
+    "Accept": {},
+    "User-Agent": {},
+    "X-Api-Version": {},
+    "X-Api-Secret": {},
+    "X-Api-Key": {}
+}
+DEBUG - 2025-10-20 23:31:48 --> SI HAY DATOS HEADER
+DEBUG - 2025-10-20 23:31:48 --> key: api.plat.com.py
+DEBUG - 2025-10-20 23:31:48 --> secret: 78Aw15&&KI
+DEBUG - 2025-10-20 23:31:48 --> version: 1.0.1
+DEBUG - 2025-10-20 23:32:15 --> SI HAY DATOS HEADER
+DEBUG - 2025-10-20 23:32:15 --> key: platia.plat.com.py
+DEBUG - 2025-10-20 23:32:15 --> secret: 78Aw15&&KI
+DEBUG - 2025-10-20 23:32:15 --> version: 1.0.1
+DEBUG - 2025-10-20 23:32:34 --> SI HAY DATOS HEADER
+DEBUG - 2025-10-20 23:32:34 --> key: platia.plat.com.py
+DEBUG - 2025-10-20 23:32:34 --> secret: 278wr12&&UY
+DEBUG - 2025-10-20 23:32:34 --> version: 1.0.1
+DEBUG - 2025-10-20 23:32:34 --> DATOS PARA SESION APP: {"usuario":"superadmin","pass":"admin123"}
+ERROR - 2025-10-20 23:32:34 --> Error en validarDatos: Undefined array key "pass"
+DEBUG - 2025-10-20 23:33:39 --> DATOS PARA SESION APP: {"usuario":"superadmin","pass":"admin123"}
+CRITICAL - 2025-10-20 23:36:26 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-20 23:36:56 --> TOTAL DE DATOS usuarios: 1

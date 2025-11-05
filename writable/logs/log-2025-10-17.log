@@ -1,0 +1,194 @@
+ERROR - 2025-10-17 10:41:00 --> Error connecting to the database: mysqli_sql_exception: Operation timed out in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php(173): mysqli->real_connect('192.168.2.25', 'induventas', Object(SensitiveParameterValue), 'gestion_ventas', 3306, '', 0)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 /opt/homebrew/var/www/admindufar-v2/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operation timed out in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#3 /opt/homebrew/var/www/admindufar-v2/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+#6 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-17 10:41:00 --> Unable to connect to the database.
+Main connection [MySQLi]: Operation timed out
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.*, `z`.`descripcion` as `grupo_vendedor`
+FROM `usuarios`
+LEFT JOIN `zonas` `z` ON `z`.`id` = `usuarios`.`id_grupo_vendedor`
+WHERE `usuarios`.`usuario` = :usuarios.usuario:
+AND `usuarios`.`estado` = :usuarios.estado:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-17 10:41:02 --> Error connecting to the database: mysqli_sql_exception: Operation timed out in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php(173): mysqli->real_connect('192.168.2.25', 'induventas', Object(SensitiveParameterValue), 'gestion_ventas', 3306, '', 0)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 /opt/homebrew/var/www/admindufar-v2/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operation timed out in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#3 /opt/homebrew/var/www/admindufar-v2/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+#6 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-17 10:41:02 --> Unable to connect to the database.
+Main connection [MySQLi]: Operation timed out
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.*, `z`.`descripcion` as `grupo_vendedor`
+FROM `usuarios`
+LEFT JOIN `zonas` `z` ON `z`.`id` = `usuarios`.`id_grupo_vendedor`
+WHERE `usuarios`.`usuario` = :usuarios.usuario:
+AND `usuarios`.`estado` = :usuarios.estado:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-17 10:41:41 --> Error connecting to the database: mysqli_sql_exception: Operation timed out in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php(173): mysqli->real_connect('192.168.2.25', 'induventas', Object(SensitiveParameterValue), 'gestion_ventas', 3306, '', 0)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 /opt/homebrew/var/www/admindufar-v2/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operation timed out in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#3 /opt/homebrew/var/www/admindufar-v2/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+#6 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-17 10:41:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Operation timed out
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.*, `z`.`descripcion` as `grupo_vendedor`
+FROM `usuarios`
+LEFT JOIN `zonas` `z` ON `z`.`id` = `usuarios`.`id_grupo_vendedor`
+WHERE `usuarios`.`usuario` = :usuarios.usuario:
+AND `usuarios`.`estado` = :usuarios.estado:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-17 10:42:18 --> Error connecting to the database: mysqli_sql_exception: Operation timed out in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php(173): mysqli->real_connect('192.168.2.25', 'induventas', Object(SensitiveParameterValue), 'gestion_ventas', 3306, '', 0)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 /opt/homebrew/var/www/admindufar-v2/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operation timed out in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#3 /opt/homebrew/var/www/admindufar-v2/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+#6 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-17 10:42:18 --> Unable to connect to the database.
+Main connection [MySQLi]: Operation timed out
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.*, `z`.`descripcion` as `grupo_vendedor`
+FROM `usuarios`
+LEFT JOIN `zonas` `z` ON `z`.`id` = `usuarios`.`id_grupo_vendedor`
+WHERE `usuarios`.`usuario` = :usuarios.usuario:
+AND `usuarios`.`estado` = :usuarios.estado:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-17 10:44:16 --> SESION ELIMINADA DE:1
+DEBUG - 2025-10-17 16:18:59 --> Datos valores: []
+DEBUG - 2025-10-17 16:24:47 --> Datos valores: {"{\"valores\":":{"{\"idValorDescuento\":\"4\",\"cantidad_min\":\"1\",\"cantidad_max\":\"9\",\"valor\":\"4.00\"},{\"idValorDescuento\":\"5\",\"cantidad_min\":\"10\",\"cantidad_max\":\"19\",\"valor\":\"8.00\"}":""}}
+DEBUG - 2025-10-17 16:25:54 --> Datos valores: {"valores":[{"idValorDescuento":"1","cantidad_min":"1","cantidad_max":"9","valor":"5.00"},{"idValorDescuento":"2","cantidad_min":"10","cantidad_max":"19","valor":"10.00"}]}
+DEBUG - 2025-10-17 16:27:16 --> Datos valores: {"valores":[{"idValorDescuento":"1","cantidad_min":"1","cantidad_max":"9","valor":"5.00"},{"idValorDescuento":"2","cantidad_min":"10","cantidad_max":"19","valor":"10.00"}]}
+DEBUG - 2025-10-17 16:28:03 --> Datos valores: {"valores":[{"idValorDescuento":"1","cantidad_min":"1","cantidad_max":"9","valor":"5.00"},{"idValorDescuento":"2","cantidad_min":"10","cantidad_max":"19","valor":"10.00"}]}
+DEBUG - 2025-10-17 16:30:32 --> Datos valores: {"valores":[{"idValorDescuento":"4","cantidad_min":"1","cantidad_max":"9","valor":"4.00"},{"idValorDescuento":"5","cantidad_min":"10","cantidad_max":"19","valor":"8.00"}]}
+DEBUG - 2025-10-17 17:00:14 --> Datos valores: {"valores":[{"idValorDescuento":"4","cantidad_min":"1","cantidad_max":"9","valor":"4.00"},{"idValorDescuento":"5","cantidad_min":"10","cantidad_max":"19","valor":"8.00"}]}
+DEBUG - 2025-10-17 17:00:14 --> ID Valor descuento4
+DEBUG - 2025-10-17 17:00:14 --> ID Valor descuento5
+DEBUG - 2025-10-17 17:01:09 --> Datos valores: {"valores":[{"idValorDescuento":"4","cantidad_min":"1","cantidad_max":"9","valor":"4.00"},{"idValorDescuento":"5","cantidad_min":"10","cantidad_max":"19","valor":"8.00"},{"idValorDescuento":"6","cantidad_min":"20","cantidad_max":"","valor":"12.00"}]}
+DEBUG - 2025-10-17 17:01:09 --> ID Valor descuento4
+DEBUG - 2025-10-17 17:01:09 --> ID Valor descuento5
+DEBUG - 2025-10-17 17:01:09 --> ID Valor descuento6

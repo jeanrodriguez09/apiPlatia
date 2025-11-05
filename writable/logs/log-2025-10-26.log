@@ -1,0 +1,108 @@
+CRITICAL - 2025-10-26 12:19:32 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-26 12:24:05 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-26 15:10:37 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-26 22:06:32 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+ERROR - 2025-10-26 22:08:19 --> mysqli_sql_exception: Unknown column 'agenda_disponible.id' in 'SELECT' in /home/platcompy/api.plat.com.py/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `agenda_...', 0)
+#1 /home/platcompy/api.plat.com.py/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `agenda_...')
+#2 /home/platcompy/api.plat.com.py/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `agenda_...')
+#3 /home/platcompy/api.plat.com.py/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `agenda_...', Array, false)
+#4 /home/platcompy/api.plat.com.py/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/platcompy/api.plat.com.py/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(331): CodeIgniter\BaseModel->findAll()
+#7 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->agendaDisponible()
+#8 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#9 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-26 22:08:19 --> Unknown column 'agenda_disponible.id' in 'SELECT'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `agenda_disponible`.`id`, `agenda_disponible`.`idItem`, `i`.`nombre` AS `servicio`, `agenda_disponible`.`fecha`, `agenda_disponible`.`horaInicio`, `agenda_disponible`.`horaFin`
+FROM `agendaDisponible`
+JOIN `items` `i` ON `i`.`id` = `agenda_disponible`.`idItem`
+WHERE `agenda_disponible`.`fecha` = \'2025-10-27\'
+AND `agenda_disponible`.`idItem` = 19
+AND `agenda_disponible`.`estado` = 1
+AND `agenda_disponible`.`horaInicio` >= \'08:00\'
+ORDER BY `agenda_disponible`.`horaInicio` ASC', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `agenda_disponible`.`id`, `agenda_disponible`.`idItem`, `i`.`nombre` AS `servicio`, `agenda_disponible`.`fecha`, `agenda_disponible`.`horaInicio`, `agenda_disponible`.`horaFin`
+FROM `agendaDisponible`
+JOIN `items` `i` ON `i`.`id` = `agenda_disponible`.`idItem`
+WHERE `agenda_disponible`.`fecha` = \'2025-10-27\'
+AND `agenda_disponible`.`idItem` = 19
+AND `agenda_disponible`.`estado` = 1
+AND `agenda_disponible`.`horaInicio` >= \'08:00\'
+ORDER BY `agenda_disponible`.`horaInicio` ASC')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `agenda_disponible`.`id`, `agenda_disponible`.`idItem`, `i`.`nombre` AS `servicio`, `agenda_disponible`.`fecha`, `agenda_disponible`.`horaInicio`, `agenda_disponible`.`horaFin`
+FROM `agendaDisponible`
+JOIN `items` `i` ON `i`.`id` = `agenda_disponible`.`idItem`
+WHERE `agenda_disponible`.`fecha` = \'2025-10-27\'
+AND `agenda_disponible`.`idItem` = 19
+AND `agenda_disponible`.`estado` = 1
+AND `agenda_disponible`.`horaInicio` >= \'08:00\'
+ORDER BY `agenda_disponible`.`horaInicio` ASC')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `agenda_disponible`.`id`, `agenda_disponible`.`idItem`, `i`.`nombre` AS `servicio`, `agenda_disponible`.`fecha`, `agenda_disponible`.`horaInicio`, `agenda_disponible`.`horaFin`
+FROM `agendaDisponible`
+JOIN `items` `i` ON `i`.`id` = `agenda_disponible`.`idItem`
+WHERE `agenda_disponible`.`fecha` = :agenda_disponible.fecha:
+AND `agenda_disponible`.`idItem` = :agenda_disponible.idItem:
+AND `agenda_disponible`.`estado` = :agenda_disponible.estado:
+AND `agenda_disponible`.`horaInicio` >= :agenda_disponible.horaInicio:
+ORDER BY `agenda_disponible`.`horaInicio` ASC', [...], false)
+ 5 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH/Controllers/Api.php(331): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Api->agendaDisponible()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-26 22:19:23 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}

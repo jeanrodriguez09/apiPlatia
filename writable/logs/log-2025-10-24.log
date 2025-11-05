@@ -1,0 +1,443 @@
+CRITICAL - 2025-10-24 05:57:00 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-24 05:57:01 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-24 11:02:50 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-24 11:02:59 --> TOTAL DE DATOS empresas: 1
+DEBUG - 2025-10-24 11:03:08 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-24 11:03:13 --> TOTAL DE DATOS empresas: 1
+DEBUG - 2025-10-24 11:04:51 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-24 11:04:55 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-24 11:05:01 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-24 11:05:05 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-24 11:05:52 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+ERROR - 2025-10-24 11:05:52 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:05:54 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:06:09 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:06:11 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2025-10-24 11:07:06 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-24 11:07:06 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-24 11:08:58 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:09:08 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:09:10 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+DEBUG - 2025-10-24 11:09:38 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-24 11:10:09 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-24 11:10:38 --> TOTAL DE DATOS empresas: 2
+ERROR - 2025-10-24 11:10:41 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:10:42 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:11:20 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:11:26 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:11:27 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:18:13 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:18:18 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:18:29 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:18:31 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:18:55 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:18:59 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+DEBUG - 2025-10-24 11:31:12 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+ERROR - 2025-10-24 11:31:13 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:31:25 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:31:26 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:49:32 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2025-10-24 11:49:33 --> error al verificar: ErrorException: Undefined array key 1 in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:491
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(491): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/home/platcompy...', 491)
+#1 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(145): App\Controllers\Api->autenticarToken()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->datosEmpresa()
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+DEBUG - 2025-10-24 11:51:17 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-24 11:51:18 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-24 11:51:30 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-24 11:51:32 --> TOTAL DE DATOS empresas: 2
+DEBUG - 2025-10-24 11:52:39 --> TOTAL DE DATOS empresas: 2
+CRITICAL - 2025-10-24 12:16:21 --> Cannot redeclare App\Controllers\Api::productos()
+in APPPATH/Controllers/Api.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-10-24 12:16:56 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-24 12:17:19 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 12:17:34 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:06:48 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-24 14:06:53 --> TOTAL DE DATOS usuarios: 0
+DEBUG - 2025-10-24 14:07:19 --> TOTAL DE DATOS usuarios: 0
+DEBUG - 2025-10-24 14:07:35 --> TOTAL DE DATOS usuarios: 0
+DEBUG - 2025-10-24 14:07:40 --> TOTAL DE DATOS usuarios: 0
+DEBUG - 2025-10-24 14:07:58 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:08:04 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:08:09 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:11:23 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:11:32 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:11:51 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:12:04 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:12:56 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:14:01 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:14:19 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:14:25 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:15:02 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:15:07 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:27:46 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-24 14:28:04 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:33:08 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:37:18 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:39:53 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+CRITICAL - 2025-10-24 14:40:07 --> Cannot access offset of type string on string
+in APPPATH/Controllers/Api.php on line 181.
+ 1 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Api->servicios()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-24 14:45:24 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+CRITICAL - 2025-10-24 14:45:29 --> Cannot access offset of type string on string
+in APPPATH/Controllers/Api.php on line 181.
+ 1 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Api->servicios()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-24 14:46:47 --> Cannot access offset of type string on string
+in APPPATH/Controllers/Api.php on line 181.
+ 1 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Api->servicios()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-24 14:47:21 --> Cannot access offset of type string on string
+in APPPATH/Controllers/Api.php on line 181.
+ 1 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Api->servicios()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-24 14:47:39 --> Cannot access offset of type string on string
+in APPPATH/Controllers/Api.php on line 181.
+ 1 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Api->servicios()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-24 14:47:56 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:48:06 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:48:36 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:49:06 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:49:12 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:49:27 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:49:32 --> TOTAL DE DATOS usuarios: 4
+DEBUG - 2025-10-24 14:54:47 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-24 14:55:01 --> TOTAL DE DATOS empresas: 1
+DEBUG - 2025-10-24 14:55:19 --> TOTAL DE DATOS empresas: 1
+ERROR - 2025-10-24 14:55:19 --> error en apiventas: ErrorException: Undefined property: App\Controllers\Api::$respond in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:229
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/home/platcompy...', 229)
+#1 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->empresas()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#5 {main}
+DEBUG - 2025-10-24 14:56:37 --> TOTAL DE DATOS empresas: 1
+ERROR - 2025-10-24 14:56:37 --> error en apiventas: ErrorException: Undefined property: App\Controllers\Api::$respond in /home/platcompy/api.plat.com.py/app/Controllers/Api.php:229
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/home/platcompy...', 229)
+#1 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->empresas()
+#2 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#5 {main}
+DEBUG - 2025-10-24 14:57:48 --> TOTAL DE DATOS empresas: 1
+DEBUG - 2025-10-24 16:08:50 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-24 16:08:51 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-24 16:08:59 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-24 16:09:06 --> TOTAL DE DATOS servicios: 4
+CRITICAL - 2025-10-24 16:27:21 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-24 16:29:39 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-24 16:42:13 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+DEBUG - 2025-10-24 16:42:14 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-24 16:43:07 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-24 16:45:06 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-24 16:45:09 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-24 16:45:38 --> TOTAL DE DATOS servicios: 4
+DEBUG - 2025-10-24 16:45:47 --> TOTAL DE DATOS servicios: 4
+CRITICAL - 2025-10-24 19:23:51 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

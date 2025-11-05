@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  api_platia_app:
+    build:
+      context: .
+      args:
+        PROJECT_NAME: api_platia
+    container_name: api_platia_app
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/api_platia
+    depends_on:
+      - api_platia_db
+    environment:
+      - DATABASE_HOST=api_platia_db
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=root
+      - DATABASE_NAME=api_platia_db
+    networks:
+      - api_platia_net
+
+  api_platia_db:
+    image: mysql:5.7
+    container_name: api_platia_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: api_platia_db
+    volumes:
+      - api_platia_db_data:/var/lib/mysql
+    networks:
+      - api_platia_net
+
+volumes:
+  api_platia_db_data:
+
+networks:
+  api_platia_net:

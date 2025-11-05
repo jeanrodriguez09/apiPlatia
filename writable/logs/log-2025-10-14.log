@@ -1,0 +1,204 @@
+ERROR - 2025-10-14 07:19:48 --> Error connecting to the database: mysqli_sql_exception: Operation timed out in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php(173): mysqli->real_connect('192.168.2.25', 'induventas', Object(SensitiveParameterValue), 'gestion_ventas', 3306, '', 0)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 /opt/homebrew/var/www/admindufar-v2/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operation timed out in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#3 /opt/homebrew/var/www/admindufar-v2/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+#6 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-14 07:19:48 --> Unable to connect to the database.
+Main connection [MySQLi]: Operation timed out
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.*, `z`.`descripcion` as `grupo_vendedor`
+FROM `usuarios`
+LEFT JOIN `zonas` `z` ON `z`.`id` = `usuarios`.`id_grupo_vendedor`
+WHERE `usuarios`.`usuario` = :usuarios.usuario:
+AND `usuarios`.`estado` = :usuarios.estado:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-14 07:19:50 --> SESION ELIMINADA DE:1
+ERROR - 2025-10-14 07:19:50 --> Error connecting to the database: mysqli_sql_exception: Operation timed out in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php(173): mysqli->real_connect('192.168.2.25', 'induventas', Object(SensitiveParameterValue), 'gestion_ventas', 3306, '', 0)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 /opt/homebrew/var/www/admindufar-v2/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operation timed out in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#3 /opt/homebrew/var/www/admindufar-v2/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+#6 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-14 07:19:50 --> Unable to connect to the database.
+Main connection [MySQLi]: Operation timed out
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.*, `z`.`descripcion` as `grupo_vendedor`
+FROM `usuarios`
+LEFT JOIN `zonas` `z` ON `z`.`id` = `usuarios`.`id_grupo_vendedor`
+WHERE `usuarios`.`usuario` = :usuarios.usuario:
+AND `usuarios`.`estado` = :usuarios.estado:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/Auth.php(76): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Auth->iniciar()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-14 15:31:31 --> Tipo de venta ingresada2
+DEBUG - 2025-10-14 15:31:31 --> Tipo de venta ingresada1
+DEBUG - 2025-10-14 16:20:28 --> SESION ELIMINADA DE:1
+DEBUG - 2025-10-14 16:20:28 --> Session: Redis::del() expected to return 1, got 0 instead.
+DEBUG - 2025-10-14 16:23:09 --> SESION ELIMINADA DE:1
+DEBUG - 2025-10-14 16:25:46 --> Tipo de venta ingresada2
+DEBUG - 2025-10-14 16:25:46 --> Tipo de venta ingresada1
+DEBUG - 2025-10-14 16:58:45 --> DATOS: {"nombre":"Nombre","descripion":"","id_cliente":"3289","id_tipo_venta":["2","1"],"id_tipo_valor":"1","prioridad":["2"],"fecha_inicio":"2025-10-01","fecha_fin":"2025-10-04","codigo_producto":"400000024"}
+DEBUG - 2025-10-14 16:58:45 --> Tipo de venta ingresada2
+DEBUG - 2025-10-14 16:58:45 --> Tipo de venta ingresada1
+DEBUG - 2025-10-14 17:16:54 --> DATOS: {"nombre":"Nombre","descripion":"Despcripcion","id_cliente":"3289","id_tipo_venta":["2","1"],"id_tipo_valor":"1","prioridad":"2","fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14","codigo_producto":"400000024"}
+ERROR - 2025-10-14 17:16:54 --> error en productos/actualizarGruposAfectadosLogicaPaquete: TypeError: json_decode(): Argument #1 ($json) must be of type string, array given in /opt/homebrew/var/www/admindufar-v2/app/Controllers/Productos.php:465
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Productos.php(465): json_decode(Array)
+#1 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Productos->crearEsquemaDescuento()
+#2 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#3 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#5 {main}
+DEBUG - 2025-10-14 17:18:25 --> DATOS: {"nombre":"Nombre","descripion":"Despcripcion","id_cliente":"3289","id_tipo_venta":["2","1"],"id_tipo_valor":"1","prioridad":"2","fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14","codigo_producto":"400000024"}
+DEBUG - 2025-10-14 17:18:25 --> Datos insercion: {"nombre":"Nombre","descripion":"Sin descripcion","id_tipo_valor":1,"id_tipo_venta":2,"prioridad":2,"estado":0,"fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14"}
+DEBUG - 2025-10-14 17:18:25 --> Tipo de venta ingresada2
+DEBUG - 2025-10-14 17:18:25 --> Datos insercion: {"nombre":"Nombre","descripion":"Sin descripcion","id_tipo_valor":1,"id_tipo_venta":1,"prioridad":2,"estado":0,"fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14"}
+DEBUG - 2025-10-14 17:18:25 --> Tipo de venta ingresada1
+DEBUG - 2025-10-14 17:41:04 --> DATOS: {"nombre":"MEMO Nro. 345 ","descripion":"Descuento fin de a\u00f1o para el cliente Farmacia San Ramon.","id_cliente":"3295","id_tipo_venta":["2","1"],"id_tipo_valor":"1","prioridad":"2","fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14","codigo_producto":"400000024"}
+ERROR - 2025-10-14 17:41:04 --> error en productos/crearEsquemaDescuento: Error: Call to undefined function App\Controllers\clear() in /opt/homebrew/var/www/admindufar-v2/app/Controllers/Productos.php:456
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Productos->crearEsquemaDescuento()
+#1 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#2 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#4 {main}
+DEBUG - 2025-10-14 17:42:19 --> DATOS: {"nombre":"MEMO Nro. 345 ","descripion":"Descuento fin de a\u00f1o para el cliente Farmacia San Ramon.","id_cliente":"3295","id_tipo_venta":["2","1"],"id_tipo_valor":"1","prioridad":"2","fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14","codigo_producto":"400000024"}
+DEBUG - 2025-10-14 17:42:19 --> Datos insercion esquema: {"nombre":"MEMO Nro. 345 ","descripion":null,"id_tipo_valor":1,"id_tipo_venta":2,"prioridad":2,"estado":0,"fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14"}
+ERROR - 2025-10-14 17:42:19 --> mysqli_sql_exception: Operand should contain 1 column(s) in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `es...', 0)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 /opt/homebrew/var/www/admindufar-v2/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /opt/homebrew/var/www/admindufar-v2/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Productos.php(469): CodeIgniter\Model->insert(Array)
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Productos->crearEsquemaDescuento()
+#9 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#10 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2025-10-14 17:42:19 --> error en productos/crearEsquemaDescuento: mysqli_sql_exception: Operand should contain 1 column(s) in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `es...', 0)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 /opt/homebrew/var/www/admindufar-v2/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /opt/homebrew/var/www/admindufar-v2/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Productos.php(469): CodeIgniter\Model->insert(Array)
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Productos->crearEsquemaDescuento()
+#9 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#10 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operand should contain 1 column(s) in /opt/homebrew/var/www/admindufar-v2/system/Database/MySQLi/Connection.php:300
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#1 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#2 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#3 /opt/homebrew/var/www/admindufar-v2/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#4 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#5 /opt/homebrew/var/www/admindufar-v2/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#6 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Productos.php(469): CodeIgniter\Model->insert(Array)
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Productos->crearEsquemaDescuento()
+#8 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#9 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operand should contain 1 column(s) in /opt/homebrew/var/www/admindufar-v2/system/Database/BaseConnection.php:646
+Stack trace:
+#0 /opt/homebrew/var/www/admindufar-v2/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#1 /opt/homebrew/var/www/admindufar-v2/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#2 /opt/homebrew/var/www/admindufar-v2/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#3 /opt/homebrew/var/www/admindufar-v2/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#4 /opt/homebrew/var/www/admindufar-v2/app/Controllers/Productos.php(469): CodeIgniter\Model->insert(Array)
+#5 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(932): App\Controllers\Productos->crearEsquemaDescuento()
+#6 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#7 /opt/homebrew/var/www/admindufar-v2/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /opt/homebrew/var/www/admindufar-v2/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+DEBUG - 2025-10-14 17:44:37 --> DATOS: {"nombre":"MEMO Nro. 345 ","descripion":"Descuento fin de a\u00f1o para el cliente Farmacia San Ramon.","id_cliente":"3295","id_tipo_venta":["2","1"],"id_tipo_valor":"1","prioridad":"2","fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14","codigo_producto":"400000024"}
+DEBUG - 2025-10-14 17:44:37 --> Datos insercion esquema: {"nombre":"MEMO Nro. 345 ","descripion":null,"id_tipo_valor":1,"id_tipo_venta":2,"prioridad":2,"estado":0,"fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14"}
+DEBUG - 2025-10-14 17:47:46 --> Datos insercion esquema: {"nombre":"MEMO Nro. 345 ","descripion":null,"id_tipo_valor":1,"id_tipo_venta":2,"prioridad":2,"estado":0,"fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14"}
+DEBUG - 2025-10-14 17:52:44 --> Datos insercion esquema: {"nombre":"MEMO Nro. 345 ","descripion":null,"id_tipo_valor":1,"id_tipo_venta":2,"prioridad":2,"estado":0,"fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14"}
+DEBUG - 2025-10-14 17:55:35 --> Datos insercion esquema: {"nombre":"MEMO Nro. 345 ","descripion":null,"id_tipo_valor":1,"id_tipo_venta":2,"prioridad":2,"estado":0,"fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14"}
+DEBUG - 2025-10-14 17:58:47 --> Datos insercion esquema: {"nombre":"MEMO Nro. 345 ","descripcion":null,"id_tipo_valor":1,"id_tipo_venta":2,"prioridad":2,"estado":0,"fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14"}
+DEBUG - 2025-10-14 17:58:47 --> Datos insercion condiciones: {"id_esquema_descuento":7,"id_tipo_condicion_descuento":1,"id_producto":400000024,"id_cliente":3295,"id_grupo_vendedor":null}
+DEBUG - 2025-10-14 17:58:47 --> Tipo de venta ingresada2
+DEBUG - 2025-10-14 17:58:47 --> Datos insercion esquema: {"nombre":"MEMO Nro. 345 ","descripcion":null,"id_tipo_valor":1,"id_tipo_venta":1,"prioridad":2,"estado":0,"fecha_inicio":"2025-10-01","fecha_fin":"2025-10-14"}
+DEBUG - 2025-10-14 17:58:47 --> Datos insercion condiciones: {"id_esquema_descuento":8,"id_tipo_condicion_descuento":1,"id_producto":400000024,"id_cliente":3295,"id_grupo_vendedor":null}
+DEBUG - 2025-10-14 17:58:47 --> Tipo de venta ingresada1
+DEBUG - 2025-10-14 18:12:38 --> Datos insercion esquema: {"nombre":"MEMO Nro.345","descripcion":"Descuento especial para el cliente FARMACIA SAN JOSE","id_tipo_valor":1,"id_tipo_venta":2,"prioridad":3,"estado":0,"fecha_inicio":"2025-10-14","fecha_fin":"2025-11-14"}
+DEBUG - 2025-10-14 18:12:38 --> ID Esquema nuevo: 9
+DEBUG - 2025-10-14 18:12:38 --> Datos insercion condiciones: {"id_esquema_descuento":9,"id_tipo_condicion_descuento":1,"id_producto":400000024,"id_cliente":3301,"id_grupo_vendedor":null}
+DEBUG - 2025-10-14 18:12:38 --> ID condicion nueva: 5
+DEBUG - 2025-10-14 18:12:38 --> Tipo de venta ingresada2
+DEBUG - 2025-10-14 18:12:38 --> Datos insercion esquema: {"nombre":"MEMO Nro.345","descripcion":"Descuento especial para el cliente FARMACIA SAN JOSE","id_tipo_valor":1,"id_tipo_venta":1,"prioridad":3,"estado":0,"fecha_inicio":"2025-10-14","fecha_fin":"2025-11-14"}
+DEBUG - 2025-10-14 18:12:38 --> ID Esquema nuevo: 10
+DEBUG - 2025-10-14 18:12:38 --> Datos insercion condiciones: {"id_esquema_descuento":10,"id_tipo_condicion_descuento":1,"id_producto":400000024,"id_cliente":3301,"id_grupo_vendedor":null}
+DEBUG - 2025-10-14 18:12:38 --> ID condicion nueva: 6
+DEBUG - 2025-10-14 18:12:38 --> Tipo de venta ingresada1

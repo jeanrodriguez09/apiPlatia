@@ -1,0 +1,177 @@
+CRITICAL - 2025-10-27 10:01:04 --> Class "App\Models\AgendamientoModel" not found
+in APPPATH/Controllers/Api.php on line 38.
+ 1 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Api->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-27 10:03:47 --> Class "App\Models\AgendamientoModel" not found
+in APPPATH/Controllers/Api.php on line 38.
+ 1 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Api->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-27 10:04:12 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+ERROR - 2025-10-27 10:04:24 --> mysqli_sql_exception: Unknown column 'items.nombre' in 'SELECT' in /home/platcompy/api.plat.com.py/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `agendam...', 0)
+#1 /home/platcompy/api.plat.com.py/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `agendam...')
+#2 /home/platcompy/api.plat.com.py/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `agendam...')
+#3 /home/platcompy/api.plat.com.py/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `agendam...', Array, false)
+#4 /home/platcompy/api.plat.com.py/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/platcompy/api.plat.com.py/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(404): CodeIgniter\BaseModel->findAll()
+#7 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->agendaCliente()
+#8 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#9 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-27 10:04:24 --> Unknown column 'items.nombre' in 'SELECT'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `agendamiento`.`id`, `items`.`nombre` AS `servicio`, `agendamiento`.`fechaHora`, `agendamiento`.`observacion`
+FROM `agendamiento`
+JOIN `items` `i` ON `i`.`id` = `agendamiento`.`idItem`
+WHERE `agendamiento`.`idCliente` = 17
+AND `agendamiento`.`estado` = 1
+ORDER BY `agendaDisponible`.`fechaHora` ASC', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `agendamiento`.`id`, `items`.`nombre` AS `servicio`, `agendamiento`.`fechaHora`, `agendamiento`.`observacion`
+FROM `agendamiento`
+JOIN `items` `i` ON `i`.`id` = `agendamiento`.`idItem`
+WHERE `agendamiento`.`idCliente` = 17
+AND `agendamiento`.`estado` = 1
+ORDER BY `agendaDisponible`.`fechaHora` ASC')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `agendamiento`.`id`, `items`.`nombre` AS `servicio`, `agendamiento`.`fechaHora`, `agendamiento`.`observacion`
+FROM `agendamiento`
+JOIN `items` `i` ON `i`.`id` = `agendamiento`.`idItem`
+WHERE `agendamiento`.`idCliente` = 17
+AND `agendamiento`.`estado` = 1
+ORDER BY `agendaDisponible`.`fechaHora` ASC')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `agendamiento`.`id`, `items`.`nombre` AS `servicio`, `agendamiento`.`fechaHora`, `agendamiento`.`observacion`
+FROM `agendamiento`
+JOIN `items` `i` ON `i`.`id` = `agendamiento`.`idItem`
+WHERE `agendamiento`.`idCliente` = :agendamiento.idCliente:
+AND `agendamiento`.`estado` = :agendamiento.estado:
+ORDER BY `agendaDisponible`.`fechaHora` ASC', [...], false)
+ 5 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH/Controllers/Api.php(404): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Api->agendaCliente()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-27 10:05:28 --> mysqli_sql_exception: Unknown column 'agendaDisponible.fechaHora' in 'ORDER BY' in /home/platcompy/api.plat.com.py/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/platcompy/api.plat.com.py/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `agendam...', 0)
+#1 /home/platcompy/api.plat.com.py/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `agendam...')
+#2 /home/platcompy/api.plat.com.py/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `agendam...')
+#3 /home/platcompy/api.plat.com.py/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `agendam...', Array, false)
+#4 /home/platcompy/api.plat.com.py/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/platcompy/api.plat.com.py/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/platcompy/api.plat.com.py/app/Controllers/Api.php(404): CodeIgniter\BaseModel->findAll()
+#7 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(932): App\Controllers\Api->agendaCliente()
+#8 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#9 /home/platcompy/api.plat.com.py/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/platcompy/api.plat.com.py/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-27 10:05:28 --> Unknown column 'agendaDisponible.fechaHora' in 'ORDER BY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `agendamiento`.`id`, `i`.`nombre` AS `servicio`, `agendamiento`.`fechaHora`, `agendamiento`.`observacion`
+FROM `agendamiento`
+JOIN `items` `i` ON `i`.`id` = `agendamiento`.`idItem`
+WHERE `agendamiento`.`idCliente` = 17
+AND `agendamiento`.`estado` = 1
+ORDER BY `agendaDisponible`.`fechaHora` ASC', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `agendamiento`.`id`, `i`.`nombre` AS `servicio`, `agendamiento`.`fechaHora`, `agendamiento`.`observacion`
+FROM `agendamiento`
+JOIN `items` `i` ON `i`.`id` = `agendamiento`.`idItem`
+WHERE `agendamiento`.`idCliente` = 17
+AND `agendamiento`.`estado` = 1
+ORDER BY `agendaDisponible`.`fechaHora` ASC')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `agendamiento`.`id`, `i`.`nombre` AS `servicio`, `agendamiento`.`fechaHora`, `agendamiento`.`observacion`
+FROM `agendamiento`
+JOIN `items` `i` ON `i`.`id` = `agendamiento`.`idItem`
+WHERE `agendamiento`.`idCliente` = 17
+AND `agendamiento`.`estado` = 1
+ORDER BY `agendaDisponible`.`fechaHora` ASC')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `agendamiento`.`id`, `i`.`nombre` AS `servicio`, `agendamiento`.`fechaHora`, `agendamiento`.`observacion`
+FROM `agendamiento`
+JOIN `items` `i` ON `i`.`id` = `agendamiento`.`idItem`
+WHERE `agendamiento`.`idCliente` = :agendamiento.idCliente:
+AND `agendamiento`.`estado` = :agendamiento.estado:
+ORDER BY `agendaDisponible`.`fechaHora` ASC', [...], false)
+ 5 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH/Controllers/Api.php(404): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Api->agendaCliente()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-27 14:32:16 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-27 14:33:06 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-27 15:41:47 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}
+CRITICAL - 2025-10-27 17:44:43 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-27 17:45:56 --> Class "Redis" not found
+in SYSTEMPATH/Session/Handlers/RedisHandler.php on line 138.
+ 1 [internal function]: CodeIgniter\Session\Handlers\RedisHandler->open('tcp://127.0.0.1:6379', 'ci_session')
+ 2 SYSTEMPATH/Session/Session.php(920): session_start()
+ 3 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH/Config/Services.php(678): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH/Config/Services.php(645): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH/Common.php(984): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH/Controllers/Auth.php(295): session()
+11 APPPATH/Controllers/Home.php(21): App\Controllers\Auth->authorizedSession(true)
+12 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Home->__construct()
+13 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-10-27 19:23:03 --> DATOS PARA SESION APP: {"usuario":"apiservice","pass":"hy2692UJ!"}

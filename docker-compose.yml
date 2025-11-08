@@ -33,6 +33,22 @@ services:
     networks:
       - api_platia_net
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      - PMA_HOST=api_platia_db
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+      - UPLOAD_LIMIT=100M
+    depends_on:
+      - api_platia_db
+    networks:
+      - api_platia_net
+
 volumes:
   api_platia_db_data:
 

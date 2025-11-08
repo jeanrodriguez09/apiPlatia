@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'      => '',
-        'hostname' => 'localhost',
-        'username' => '',
-        'password' => '',
-        'database' => '',
+        'hostname' => 'api_platia_db',         // o 'localhost' si corre fuera del contenedor
+        'username' => 'root',
+        'password' => 'root',
+        'database' => 'api_platia_db',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

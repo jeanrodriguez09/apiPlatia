@@ -108,6 +108,20 @@
                         <label for="descripcion">Descripci&oacute;n</label>
                     </div>
                   </div>
+                  <hr>
+                  <h3>Reglas Bot</h3>
+                  <div class="col-md-12">
+                    <div class="form-floating mb-2">
+                        <textarea rows="9" id="reglasBasicas" class="form-control"></textarea>
+                        <label for="descripcion">Reglas B&aacute;sicas</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-floating mb-2">
+                        <textarea rows="9" id="reglasRestrictivas" class="form-control"></textarea>
+                        <label for="descripcion">Reglas Restrictivas</label>
+                    </div>
+                  </div>
                 </div>
                 
               </div>
@@ -274,6 +288,18 @@
                             } else {
                                 $('#descripcion').val(datos.descripcionNegocio);
                             }
+
+                            if (tinymce.get('reglasBasicas')) {
+                                tinymce.get('reglasBasicas').setContent(datos.reglasBasicas || '');
+                            } else {
+                                $('#reglasBasicas').val(datos.reglasBasicas);
+                            }
+
+                            if (tinymce.get('reglasRestrictivas')) {
+                                tinymce.get('reglasRestrictivas').setContent(datos.reglasRestrictivas || '');
+                            } else {
+                                $('#reglasRestrictivas').val(datos.reglasRestrictivas);
+                            }
                             
 
                         } else {
@@ -301,9 +327,11 @@
                 const idRubro = $('#rubro').val().trim();
                 const correo = $('#correoEmpresa').val().trim();
                 const descripcion = tinymce.get('descripcion').getContent();
+                const reglasBasicas = tinymce.get('reglasBasicas').getContent();
+                const reglasRestrictivas = tinymce.get('reglasRestrictivas').getContent();
                 let idb = <?php echo $cod_usuario; ?>;
                 
-                console.log('Datos a enviar:', {idb, idEmpresa, nombre, correo, idRubro, descripcion});
+                console.log('Datos a enviar:', {idb, idEmpresa, nombre, correo, idRubro, descripcion, reglasBasicas, reglasRestrictivas});
             
                 // Validación simple
                 if (nombre === '' || correo === '') {
@@ -321,7 +349,9 @@
                     nombre: nombre,
                     correo: correo,
                     idRubro: idRubro,
-                    descripcion: descripcion
+                    descripcion: descripcion,
+                    reglasBasicas: reglasBasicas,
+                    reglasRestrictivas: reglasRestrictivas
                 };
             
                 $.ajax({
@@ -341,6 +371,8 @@
                                 $('#ModalRegistroEmpresa input, #ModalRegistroEmpresa textarea').val('');
                                 $('#ModalRegistroEmpresa select').prop('selectedIndex', 0);
                                 tinymce.get('descripcion').setContent(''); // ✅ limpiar editor
+                                tinymce.get('reglasBasicas').setContent(''); // ✅ limpiar editor
+                                tinymce.get('reglasRestrictivas').setContent(''); // ✅ limpiar editor
                                 $('#ModalRegistroEmpresa').modal('hide');
                                 // Podés recargar tabla o datos acá
                                 tabla.ajax.reload();

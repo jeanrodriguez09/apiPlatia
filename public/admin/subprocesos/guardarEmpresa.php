@@ -11,6 +11,8 @@ $nombre = $_POST['nombre'] ?? '';
 $correo = $_POST['correo'] ?? '';
 $idRubro = $_POST['idRubro'] ?? '';
 $descripcion = $_POST['descripcion'] ?? '';
+$reglasBasicas = $_POST['reglasBasicas'] ?? '';
+$reglasRestrictivas = $_POST['reglasRestrictivas'] ?? '';
 
 if ($nombre === '' || $correo === '' || empty($idRubro) || $idResponsable === 0) {
     $response['message'] = 'Faltan campos obligatorios';
@@ -20,8 +22,8 @@ if ($nombre === '' || $correo === '' || empty($idRubro) || $idResponsable === 0)
 
 if ($id === 0) {
     // INSERTAR
-    $stmt = $link->prepare("INSERT INTO empresas (nombre, email_contacto, descripcionNegocio, idRubro, idUsuarioResponsable) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssii", $nombre, $correo, $descripcion, $idRubro, $idResponsable);
+    $stmt = $link->prepare("INSERT INTO empresas (nombre, email_contacto, descripcionNegocio, idRubro, idUsuarioResponsable, reglasBasicas, reglasRestrictivas) VALUES (?, ?, ?, ?, ?, ?. ?)");
+    $stmt->bind_param("sssiiss", $nombre, $correo, $descripcion, $idRubro, $idResponsable, $reglasBasicas. $reglasRestrictivas);
     if ($stmt->execute()) {
         $response = ['status' => 'success', 'message' => 'Empresa registrada correctamente'];
     } else {
@@ -29,8 +31,8 @@ if ($id === 0) {
     }
 } else {
     // ACTUALIZAR
-    $stmt = $link->prepare("UPDATE empresas SET nombre = ?, email_contacto = ?, descripcionNegocio = ?, idRubro = ? WHERE id = ?");
-    $stmt->bind_param("sssii", $nombre, $correo, $descripcion, $idRubro, $id);
+    $stmt = $link->prepare("UPDATE empresas SET nombre = ?, email_contacto = ?, descripcionNegocio = ?, idRubro = ?, reglasBasicas = ?, reglasRestrictivas = ? WHERE id = ?");
+    $stmt->bind_param("sssissi", $nombre, $correo, $descripcion, $idRubro, $reglasBasicas, $reglasRestrictivas, $id);
     if ($stmt->execute()) {
         if ($stmt->affected_rows > 0) {
             $response = ['status' => 'success', 'message' => 'Empresa actualizada correctamente'];

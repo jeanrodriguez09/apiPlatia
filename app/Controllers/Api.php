@@ -267,7 +267,9 @@ class Api extends Auth
                                 empresas.direccion,
                                 empresas.latitud,
                                 empresas.longitud,
-                                empresas.ruc
+                                empresas.ruc,
+                                empresas.reglasBasicas,
+                                empresas.reglasRestrictivas
                              ')
                              ->join('numeros_whatsapp nw', 'nw.idEmpresa = empresas.id')
                              ->join('rubros r', 'r.id = empresas.idRubro')
@@ -288,6 +290,19 @@ class Api extends Auth
                                          ->where('idEmpresa', $idEmpresa)
                                          ->where('empresas_datos_bancarios.estado', 1)
                                          ->findAll();
+
+            $datosEmpresa['reglasBasicas'] = html_entity_decode($datosEmpresa['reglasBasicas'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $datosEmpresa['reglasRestrictivas'] = html_entity_decode($datosEmpresa['reglasRestrictivas'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+
+            function html_to_text($html) {
+                $html = str_replace(['<br>', '<br/>', '<br />'], "\n", $html);
+                $html = str_replace(['</p>'], "\n", $html);
+                $html = strip_tags($html);
+                return trim($html);
+            }
+
+            $datosEmpresa['reglasBasicas'] = html_to_text($datosEmpresa['reglasBasicas']);
+            $datosEmpresa['reglasRestrictivas'] = html_to_text($datosEmpresa['reglasRestrictivas']);
             
             $data = [
                     "datosEmpresa" => $datosEmpresa,
@@ -295,6 +310,9 @@ class Api extends Auth
                 ];
                              
             log_message('debug', 'TOTAL DE DATOS empresas: '.count($data));
+
+            $this->response->setHeader('Content-Type', 'application/json; charset=utf-8');
+            $this->response->noCache();
 
             return $this->respond($data);
         }catch(\Exception $e){

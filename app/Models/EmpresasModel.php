@@ -22,5 +22,7 @@ class EmpresasModel extends Model{
         'latitud',
         'longitud',
         'ruc',
+        'reglasBasicas',
+        'reglasRestrictivas',
     ];
 }

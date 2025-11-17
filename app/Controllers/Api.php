@@ -716,14 +716,16 @@ class Api extends Auth
                             'mensaje' => '✅ cliente registrado correctamente',
                             'idAgendamiento' => $idClienteInsertado
                         ]);
+                        
                     } else {
                         
                         // === LÓGICA ACTUAL (CONSULTA) ===
                 
-                        $idCliente = !empty($inputs['idCliente']) ? intval($inputs['idCliente']) : NULL;
-                        if (empty($idCliente)) 
+                        $telefono = !empty($inputs['numero']) ? intval($inputs['numero']) : NULL;
+                        $idEmpresa = !empty($inputs['idEmpresa']) ? intval($inputs['idEmpresa']) : NULL;
+                        if (empty($telefono) || empty($idEmpresa)) 
                             return $this->fail('Faltan parametros para consultar los datos del cliente.');
-                
+                        
                         $query = $this->clientesModel
                             ->select('
                                 clientes.id,
@@ -731,21 +733,55 @@ class Api extends Auth
                                 clientes.nombre,
                                 clientes.email
                             ')
-                            ->where('clientes.id', $idCliente)
+                            ->where('clientes.numero', $telefono)
+                            ->where('clientes.idEmpresa', $idEmpresa)
                             ->where('clientes.estado', 1);
-                
+                        
                         $cliente = $query->first();
-                
+                        
                         if (empty($cliente)) {
                             return $this->failNotFound('El cliente no existe o esta bloqueado.');
                         }
-                
-                        foreach ($cliente as &$cl) {
-                            $cl['nombre'] = utf8_decode($cl['nombre']);
-                            $cl['email'] = utf8_decode($cl['email']);
+                        
+                        // === SERVICIOS SELECCIONADOS ===
+                        $serviciosSeleccionados = $this->agendamientoModel
+                            ->select('
+                                i.id,
+                                i.nombre,
+                                agendamiento.fechaHora,
+                                agendamiento.observacion
+                            ')
+                            ->join('items i', 'i.id = agendamiento.idItem')
+                            ->where('agendamiento.idCliente', $cliente['id'])
+                            ->where('agendamiento.estado', 1)
+                            ->findAll();
+                        
+                        // Normalización texto
+                        $cliente['nombre'] = utf8_decode($cliente['nombre']);
+                        $cliente['email']  = utf8_decode($cliente['email']);
+                        
+                        // === ARMAR RESPUESTA ===
+                        $respuesta = [
+                            'id' => $cliente['id'],
+                            'nombre_cliente' => $cliente['nombre'],
+                            'telefono_cliente' => $cliente['numero'],
+                            'datos_personales' => [
+                                'email' => $cliente['email']
+                            ],
+                            'servicios_seleccionados' => [] // se completa abajo
+                        ];
+                        
+                        // === CARGAR SERVICIOS SELECCIONADOS EN EL JSON FINAL ===
+                        foreach ($serviciosSeleccionados as $srv) {
+                            $respuesta['servicios_seleccionados'][] = [
+                                'id' => $srv['id'],
+                                'nombre' => utf8_decode($srv['nombre']),
+                                'fecha_hora' => $srv['fechaHora'],
+                                'observacion' => utf8_decode($srv['observacion'])
+                            ];
                         }
-                
-                        return $this->respond($cliente);
+                        
+                        return $this->respond($respuesta);
                         
                     }
                     

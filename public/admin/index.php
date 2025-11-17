@@ -80,7 +80,7 @@
                         </div>
                         <h3 class="mb-3 font-weight-bold text-center">Iniciar sesi&oacute;n</h3>
                         <p class="text-center text-secondary mb-4">Ingresar sus credenciales de acceso:</p>
-                        <div class="social-btn d-flex justify-content-around align-items-center mb-4">
+                        <!--<div class="social-btn d-flex justify-content-around align-items-center mb-4">
                             <button class="btn btn-outline-light">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 262" preserveAspectRatio="xMidYMid">
                                     <path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4"/>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="mb-5">
                             <p class="line-around text-secondary mb-0"><span class="line-around-1">o inicar con su correo electr&oacute;nico</span></p>
-                        </div>
+                        </div>-->
                         <form action="login.php" method="POST">
                            <div class="row">
                               <div class="col-lg-12">

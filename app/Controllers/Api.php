@@ -731,16 +731,28 @@ class Api extends Auth
                                 clientes.id,
                                 clientes.numero,
                                 clientes.nombre,
-                                clientes.email
+                                clientes.email,
+                                clientes.estado
                             ')
                             ->where('clientes.numero', $telefono)
-                            ->where('clientes.idEmpresa', $idEmpresa)
-                            ->where('clientes.estado', 1);
+                            ->where('clientes.idEmpresa', $idEmpresa);
                         
                         $cliente = $query->first();
                         
                         if (empty($cliente)) {
-                            return $this->failNotFound('El cliente no existe o esta bloqueado.');
+                            return $this->respond([
+                                'status'    => 404,
+                                'message'   => 'El cliente no existe.',
+                                'bloqueado' => null
+                            ], 404);
+                        }
+
+                        if ($cliente['estado'] == 0) {
+                            return $this->respond([
+                                'status'    => 403,
+                                'message'   => 'El cliente está bloqueado.',
+                                'bloqueado' => 1
+                            ], 403);
                         }
                         
                         // === SERVICIOS SELECCIONADOS ===

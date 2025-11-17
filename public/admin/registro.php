@@ -8,6 +8,10 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
     <?php include 'inc/css.php'; ?>
+    <!-- LEAFLET MAP -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 </head>
 
 <body>
@@ -86,10 +90,11 @@
                                         <!-- UBICACIÓN -->
                                         <div class="form-group">
                                             <label>Ubicación del negocio</label>
-                                            <button type="button" id="btnUbicacion" class="btn btn-outline-primary btn-block mb-2">
-                                                Obtener ubicación exacta
+                                            <button type="button" id="btnMapa" class="btn btn-outline-primary btn-block mb-2">
+                                                Seleccionar ubicación en mapa
                                             </button>
                                         </div>
+
 
                                         <div class="form-group">
                                             <label>Latitud</label>
@@ -120,6 +125,27 @@
             </div>
 
         </section>
+
+        <!-- Modal Mapa -->
+        <div class="modal fade" id="modalMapa" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title">Seleccionar ubicación de tu negocio</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body" style="height: 500px;">
+                    <div id="mapaSeleccion" style="height: 100%; width: 100%;"></div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- JS Frameworks -->
@@ -154,49 +180,6 @@
             document.getElementById('step1').style.display = 'block';
         });
 
-        // ====== Obtener Ubicación ======
-        document.getElementById('btnUbicacion').addEventListener('click', function () {
-
-            if (!navigator.geolocation) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'No compatible',
-                    text: 'Tu navegador no soporta geolocalización.'
-                });
-                return;
-            }
-
-            Swal.fire({
-                title: 'Obteniendo ubicación…',
-                text: 'Espera unos segundos mientras capturamos tu ubicación.',
-                didOpen: () => Swal.showLoading(),
-                allowOutsideClick: false
-            });
-
-            navigator.geolocation.getCurrentPosition(
-                function (position) {
-                    Swal.close();
-                    document.getElementById('latitud').value = position.coords.latitude;
-                    document.getElementById('longitud').value = position.coords.longitude;
-
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Ubicación obtenida',
-                        text: 'Latitud y longitud registradas.',
-                        timer: 2000
-                    });
-                },
-                function () {
-                    Swal.close();
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'No se pudo obtener la ubicación',
-                        text: 'Activa GPS o concede permisos de ubicación.'
-                    });
-                }
-            );
-        });
-
         // ====== Validación Final ======
         document.getElementById('formRegistro').addEventListener('submit', function (e) {
 
@@ -214,6 +197,56 @@
         });
 
     </script>
+
+    <script>
+        let mapa;
+        let marcador;
+
+        // Abrir modal y cargar mapa
+        document.getElementById("btnMapa").addEventListener("click", function () {
+            $("#modalMapa").modal("show");
+
+            setTimeout(() => {
+                if (!mapa) {
+                    mapa = L.map('mapaSeleccion').setView([-25.282197, -57.635099], 13); // Centro Paraguay
+
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19
+                    }).addTo(mapa);
+
+                    // CLICK EN EL MAPA
+                    mapa.on("click", function (e) {
+                        let lat = e.latlng.lat;
+                        let lng = e.latlng.lng;
+
+                        // Eliminar marcador previo
+                        if (marcador) {
+                            mapa.removeLayer(marcador);
+                        }
+
+                        // Crear nuevo marcador
+                        marcador = L.marker([lat, lng]).addTo(mapa);
+
+                        // Llenar inputs
+                        document.getElementById("latitud").value = lat;
+                        document.getElementById("longitud").value = lng;
+
+                        Swal.fire({
+                            icon: "success",
+                            title: "Ubicación seleccionada",
+                            text: "Latitud y longitud cargadas.",
+                            timer: 1500,
+                            showConfirmButton: false
+                        });
+                    });
+
+                } else {
+                    mapa.invalidateSize(); // Arregla errores del mapa en modal
+                }
+            }, 300);
+        });
+    </script>
+
 
 </body>
 </html>

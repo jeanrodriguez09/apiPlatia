@@ -138,6 +138,10 @@
 
                                 </form>
 
+                                <div class="col-lg-12 mt-3">
+                                    <p class="mb-0 text-center">Ya tienes una cuenta? <a href="index.php">Inicia sesi&oacute;n</a></p>
+                                </div>
+
                             </div>
                         </div>
                     </div>

@@ -17,7 +17,7 @@ if (!isset($_POST['idEmpresa'])) {
 $id = intval($_POST['idEmpresa']); // Recibe el ID de la solicitud
 
 // Consulta para obtener los datos de la solicitud
-$query = "SELECT * FROM empresas WHERE id = $id"; // Asegúrate de ajustar la tabla y campos según tu estructura
+$query = "SELECT e.*, w.phone_number_id, w.access_token FROM empresas e INNER JOIN numeros_whatsapp w ON w.idEmpresa=e.id WHERE e.id = $id"; // Asegúrate de ajustar la tabla y campos según tu estructura
 $result = $link->query($query);
 
 if ($result && mysqli_num_rows($result) > 0) {

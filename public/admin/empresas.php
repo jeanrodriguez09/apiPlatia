@@ -96,6 +96,18 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-floating mb-2">
+                      <input type="text" class="form-control" id="id_numero">
+                      <label for="id_numero">ID N&uacute;mero META</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating mb-2">
+                      <input type="text" class="form-control" id="token_acceso">
+                      <label for="token_acceso">Token Acceso META</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating mb-2">
                         <select class="form-select" id="rubro" name="rubro">
                           <option value="">Cargando rubros</option>
                         </select>
@@ -280,6 +292,9 @@
                             $('#idEmpresa').val(datos.id);
                             $('#nombreEmpresa').val(datos.nombre);
                             $('#correoEmpresa').val(datos.email_contacto);
+                            $('#id_numero').val(datos.phone_number_id);
+                            $('#token_acceso').val(datos.access_token);
+
                             
                             cargarRubros(datos.idRubro);
                             
@@ -326,12 +341,14 @@
                 const nombre = $('#nombreEmpresa').val().trim();
                 const idRubro = $('#rubro').val().trim();
                 const correo = $('#correoEmpresa').val().trim();
+                const id_phone_number = $('#id_numero').val().trim();
+                const token_access = $('#token_acceso').val().trim();
                 const descripcion = tinymce.get('descripcion').getContent();
                 const reglasBasicas = tinymce.get('reglasBasicas').getContent();
                 const reglasRestrictivas = tinymce.get('reglasRestrictivas').getContent();
                 let idb = <?php echo $cod_usuario; ?>;
                 
-                console.log('Datos a enviar:', {idb, idEmpresa, nombre, correo, idRubro, descripcion, reglasBasicas, reglasRestrictivas});
+                console.log('Datos a enviar:', {idb, idEmpresa, nombre, correo, idRubro, descripcion, reglasBasicas, reglasRestrictivas, id_phone_number, token_access});
             
                 // Validación simple
                 if (nombre === '' || correo === '') {
@@ -351,7 +368,9 @@
                     idRubro: idRubro,
                     descripcion: descripcion,
                     reglasBasicas: reglasBasicas,
-                    reglasRestrictivas: reglasRestrictivas
+                    reglasRestrictivas: reglasRestrictivas,
+                    id_phone_number: id_phone_number,
+                    token_access: token_access
                 };
             
                 $.ajax({

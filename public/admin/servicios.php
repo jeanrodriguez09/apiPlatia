@@ -278,7 +278,7 @@
                 $.ajax({
                     url: 'subprocesos/insertarServicio.php',
                     type: 'POST',
-                    data: { nombre, descripcion, precio, duracion, estado, idEmpresa },
+                    data: { nombre, descripcion, precio, duracion, estado, idEmpresa, idUsuarioCreador:cod_usuario},
                     dataType: 'json',
                     success: function(response){
                         if(response.status==='success'){

@@ -1,6 +1,9 @@
 <?php include 'cabecera.php'; ?>
 <title>Productos || platIA || Administrador</title>
 <?php include 'inc/css.php'; ?>
+<script>
+    var cod_usuario = <?php echo $cod_usuario; ?>;
+</script>
 </head>
 <body class="color-light">
 <?php include 'inc/preloader.php'; ?>
@@ -172,7 +175,7 @@
                 $.ajax({
                     url: 'subprocesos/insertarProducto.php',
                     type: 'POST',
-                    data: { nombre, descripcion, precio, duracion, estado, idEmpresa },
+                    data: { nombre, descripcion, precio, duracion, estado, idEmpresa, idUsuarioCreador:cod_usuario },
                     dataType: 'json',
                     success: function(response){
                         if(response.status==='success'){

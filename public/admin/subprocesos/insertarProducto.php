@@ -7,17 +7,18 @@ $precio = $_POST['precio'];
 $duracion = $_POST['duracion'];
 $estado = $_POST['estado'];
 $idEmpresa = $_POST['idEmpresa'];
+$idUsuarioCreador = $_POST['idUsuarioCreador'];
 $idTipo = 1; // Productos
 
 // Preparar la consulta
-$stmt = $link->prepare("INSERT INTO items (nombre, descripcion, precio, duracion, estado, idEmpresa, idTipo, fechaCreacion) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())");
+$stmt = $link->prepare("INSERT INTO items (nombre, descripcion, precio, duracion, estado, idEmpresa, idTipo, idUsuarioCreador, fechaCreacion) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())");
 if($stmt === false){
     echo json_encode(['status'=>'error','message'=>'Error al preparar la consulta: '.$link->error]);
     exit;
 }
 
 // Asignar parámetros: s=string, i=int, d=double
-$stmt->bind_param("ssdiiii", $nombre, $descripcion, $precio, $duracion, $estado, $idEmpresa, $idTipo);
+$stmt->bind_param("ssdiiiii", $nombre, $descripcion, $precio, $duracion, $estado, $idEmpresa, $idTipo, $idUsuarioCreador);
 
 // Ejecutar
 if($stmt->execute()){

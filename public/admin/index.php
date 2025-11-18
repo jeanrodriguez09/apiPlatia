@@ -104,7 +104,7 @@
                                  <div class="form-group">
                                      <div class="d-flex justify-content-between align-items-center">
                                          <label class="text-secondary">Contrase&ntilde;a</label>
-                                         <label><a href="auth-recover-pwd.html">Recordar contrase&ntilde;a?</a></label>
+                                         <!--<label><a href="auth-recover-pwd.html">Recordar contrase&ntilde;a?</a></label>-->
                                      </div>
                                     <input class="form-control" type="password" name="password" placeholder="Ingresar contrase&ntilde;a" required>
                                  </div>
@@ -112,7 +112,7 @@
                            </div>
                            <button type="submit" class="btn btn-primary btn-block mt-2">Iniciar sesi&oacute;n</button>
                            <div class="col-lg-12 mt-3">
-                                <p class="mb-0 text-center">No tienes una cuenta? <a href="auth-sign-up.html">Crear cuenta</a></p>
+                                <p class="mb-0 text-center">No tienes una cuenta? <a href="registro.php">Crear cuenta</a></p>
                            </div>
                         </form>
                      </div>

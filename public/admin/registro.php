@@ -35,7 +35,7 @@
                                 </p>
 
                                 <!-- FORMULARIO -->
-                                <form id="formRegistro" action="registrar.php" method="POST">
+                                <form id="formRegistro" action="" method="POST">
 
                                     <!-- ================== PASO 1 – Usuario ================== -->
                                     <div id="step1">
@@ -75,6 +75,26 @@
                                         <div class="form-group">
                                             <label>Email empresarial</label>
                                             <input type="email" name="empresa_email" class="form-control">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                          <label for="whatsapp">Número WhatsApp</label>
+                                          <div class="input-group">
+                                            <span class="input-group-text" id="prefix">595</span>
+                                            <input
+                                              id="whatsapp"
+                                              name="numero_parte"
+                                              type="text"
+                                              class="form-control"
+                                              inputmode="numeric"
+                                              pattern="\d{9}"
+                                              maxlength="9"
+                                              placeholder="Ej: 981234999"
+                                              aria-describedby="prefix"
+                                              required
+                                            >
+                                          </div>
+                                          <small class="form-text text-muted">Ingresá solo los 9 dígitos después de <strong>595</strong>. Sin espacios ni signos.</small>
                                         </div>
 
                                         <div class="form-group">
@@ -196,6 +216,104 @@
             }
         });
 
+        // Interceptar el envío del formulario
+        document.getElementById("formRegistro").addEventListener("submit", function(e) {
+
+            if (document.getElementById('latitud').value.trim() === "" ||
+                document.getElementById('longitud').value.trim() === "") {
+
+                e.preventDefault();
+
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Falta la ubicación',
+                    text: 'Debes obtener la ubicación de tu negocio antes de finalizar.'
+                });
+            
+            } else {
+
+                e.preventDefault(); // Evita la recarga
+
+                const form = document.getElementById("formRegistro");
+                const formData = new FormData(form);
+
+                // Mostrar cargando
+                Swal.fire({
+                    title: "Registrando...",
+                    text: "Por favor espera",
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading();
+                    }
+                });
+
+                fetch("subprocesos/registrar.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(async response => {
+                    const text = await response.text();
+                    console.log("RAW RESPONSE:", text); // <--- ver lo crudo que devuelve PHP
+                    try {
+                        const json = JSON.parse(text);
+                        return json;
+                    } catch (err) {
+                        Swal.close();
+                        console.error("Error parseando JSON:", err);
+                        Swal.fire({
+                            icon: "error",
+                            title: "Error servidor",
+                            text: "El servidor no devolvió un JSON válido. Revisa la consola (RAW RESPONSE)."
+                        });
+                        throw new Error("JSON parse error");
+                    }
+                })
+                .then(res => {
+                    console.log("JSON parsed:", res);
+                    if (res.status === "error") {
+                        Swal.fire({ icon: "error", title: "Error", text: res.message });
+                        return;
+                    }
+                    Swal.fire({
+                        icon: "success",
+                        title: "Registro completado",
+                        text: res.message,
+                        confirmButtonText: "OK"
+                    }).then(() => {
+                        window.location.href = "index.php"; // REDIRECCIÓN SIMPLE
+                        // // Crear un formulario POST dinámico
+                        // const form = document.createElement('form');
+                        // form.method = 'POST';
+                        // form.action = 'login.php'; // CAMBIÁ AQUÍ tu ruta destino
+                    
+                        // // Campo usuario
+                        // const inputUsuario = document.createElement('input');
+                        // inputUsuario.type = 'hidden';
+                        // inputUsuario.name = 'username';
+                        // inputUsuario.value = res.usuario;
+                        // form.appendChild(inputUsuario);
+                    
+                        // // Campo password temporal
+                        // const inputPass = document.createElement('input');
+                        // inputPass.type = 'hidden';
+                        // inputPass.name = 'password';
+                        // inputPass.value = res.password_temporal;
+                        // form.appendChild(inputPass);
+                    
+                        // // Adjuntar y enviar
+                        // document.body.appendChild(form);
+                        // form.submit();
+                    });
+                })
+                .catch(err => {
+                    console.error("Error fetch:", err);
+                });
+
+                
+            }
+
+        });
+
     </script>
 
     <script>
@@ -238,6 +356,8 @@
                             timer: 1500,
                             showConfirmButton: false
                         });
+
+                        $("#modalMapa").modal("hide");
                     });
 
                 } else {

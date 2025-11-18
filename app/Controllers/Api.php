@@ -723,9 +723,11 @@ class Api extends Auth
                 
                         $telefono = !empty($inputs['numero']) ? intval($inputs['numero']) : NULL;
                         $idEmpresa = !empty($inputs['idEmpresa']) ? intval($inputs['idEmpresa']) : NULL;
-                        if (empty($telefono) || empty($idEmpresa)) 
+
+                        if (empty($telefono) || empty($idEmpresa)) {
                             return $this->fail('Faltan parametros para consultar los datos del cliente.');
-                        
+                        }
+
                         $query = $this->clientesModel
                             ->select('
                                 clientes.id,
@@ -736,9 +738,9 @@ class Api extends Auth
                             ')
                             ->where('clientes.numero', $telefono)
                             ->where('clientes.idEmpresa', $idEmpresa);
-                        
+
                         $cliente = $query->first();
-                        
+
                         if (empty($cliente)) {
                             return $this->respond([
                                 'status'    => 404,
@@ -754,7 +756,7 @@ class Api extends Auth
                                 'bloqueado' => 1
                             ], 403);
                         }
-                        
+
                         // === SERVICIOS SELECCIONADOS ===
                         $serviciosSeleccionados = $this->agendamientoModel
                             ->select('
@@ -767,32 +769,28 @@ class Api extends Auth
                             ->where('agendamiento.idCliente', $cliente['id'])
                             ->where('agendamiento.estado', 1)
                             ->findAll();
-                        
-                        // Normalización texto
-                        $cliente['nombre'] = utf8_decode($cliente['nombre']);
-                        $cliente['email']  = utf8_decode($cliente['email']);
-                        
+
                         // === ARMAR RESPUESTA ===
                         $respuesta = [
                             'id' => $cliente['id'],
-                            'nombre_cliente' => $cliente['nombre'],
+                            'nombre_cliente' => $cliente['nombre'],       // SIN utf8_decode
                             'telefono_cliente' => $cliente['numero'],
                             'datos_personales' => [
-                                'email' => $cliente['email']
+                                'email' => $cliente['email']             // SIN utf8_decode
                             ],
-                            'servicios_seleccionados' => [] // se completa abajo
+                            'servicios_seleccionados' => []
                         ];
-                        
-                        // === CARGAR SERVICIOS SELECCIONADOS EN EL JSON FINAL ===
+
+                        // === CARGAR SERVICIOS SELECCIONADOS ===
                         foreach ($serviciosSeleccionados as $srv) {
                             $respuesta['servicios_seleccionados'][] = [
                                 'id' => $srv['id'],
-                                'nombre' => utf8_decode($srv['nombre']),
+                                'nombre' => $srv['nombre'],              // SIN utf8_decode
                                 'fecha_hora' => $srv['fechaHora'],
-                                'observacion' => utf8_decode($srv['observacion'])
+                                'observacion' => $srv['observacion']     // SIN utf8_decode
                             ];
                         }
-                        
+
                         return $this->respond($respuesta);
                         
                     }

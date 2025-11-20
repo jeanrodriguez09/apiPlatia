@@ -33,6 +33,20 @@ services:
     networks:
       - api_platia_net
 
+  web_platia_app:
+    build:
+      context: ./public/web
+      dockerfile: Dockerfile
+    container_name: web_platia_app
+    ports:
+      - "8001:80"
+    volumes:
+      - ./public/web:/var/www/html
+    depends_on:
+      - api_platia_db
+    networks:
+      - api_platia_net
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
